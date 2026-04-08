@@ -4,6 +4,19 @@ import { useEffect, useState } from 'react'
 import Link from 'next/link'
 import { PAISES } from '@/lib/supabase'
 
+const PAIS_POR_CODIGO: Record<string, string> = {
+  CO: 'Colombia',
+  MX: 'México',
+  AR: 'Argentina',
+  VE: 'Venezuela',
+  PE: 'Perú',
+  CL: 'Chile',
+  EC: 'Ecuador',
+  CR: 'Costa Rica',
+  CU: 'Cuba',
+  DO: 'Rep. Dominicana',
+}
+
 const PAIS_POR_TIMEZONE: Record<string, string> = {
   'America/Bogota': 'Colombia',
   'America/Mexico_City': 'México',
@@ -25,17 +38,37 @@ export default function BannerContribuir() {
   const [bandera, setBandera] = useState('')
 
   useEffect(() => {
-    try {
-      const tz = Intl.DateTimeFormat().resolvedOptions().timeZone
-      const pais = PAIS_POR_TIMEZONE[tz]
-      if (pais) {
-        setPaisDetectado(pais)
-        const found = PAISES.find(p => p.nombre === pais)
-        setBandera(found?.bandera ?? '')
+    async function detectarPais() {
+      // Intentar por IP primero (respeta VPN)
+      try {
+        const res = await fetch('https://ipapi.co/country_code/')
+        if (res.ok) {
+          const code = (await res.text()).trim()
+          const pais = PAIS_POR_CODIGO[code]
+          if (pais) {
+            setPaisDetectado(pais)
+            setBandera(PAISES.find(p => p.nombre === pais)?.bandera ?? '')
+            return
+          }
+        }
+      } catch {
+        // IP detection failed, fall back to timezone
       }
-    } catch {
-      // timezone detection not available
+
+      // Fallback: timezone del sistema
+      try {
+        const tz = Intl.DateTimeFormat().resolvedOptions().timeZone
+        const pais = PAIS_POR_TIMEZONE[tz]
+        if (pais) {
+          setPaisDetectado(pais)
+          setBandera(PAISES.find(p => p.nombre === pais)?.bandera ?? '')
+        }
+      } catch {
+        // timezone detection not available
+      }
     }
+
+    detectarPais()
   }, [])
 
   return (

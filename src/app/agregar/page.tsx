@@ -35,27 +35,37 @@ export default function AgregarPage() {
     return () => subscription.unsubscribe()
   }, [])
 
-  // Detect timezone country for pre-selection
+  // Detect country for pre-selection (IP first, then timezone fallback)
   useEffect(() => {
     if (form.pais) return
-    try {
-      const tz = Intl.DateTimeFormat().resolvedOptions().timeZone
-      const tzMap: Record<string, string> = {
-        'America/Bogota': 'Colombia',
-        'America/Mexico_City': 'M\u00e9xico',
-        'America/Buenos_Aires': 'Argentina',
-        'America/Argentina/Buenos_Aires': 'Argentina',
-        'America/Caracas': 'Venezuela',
-        'America/Lima': 'Per\u00fa',
-        'America/Santiago': 'Chile',
-        'America/Guayaquil': 'Ecuador',
-        'America/Costa_Rica': 'Costa Rica',
-        'America/Havana': 'Cuba',
-        'America/Santo_Domingo': 'Rep. Dominicana',
-      }
-      const pais = tzMap[tz]
-      if (pais) setForm(f => ({ ...f, pais }))
-    } catch { /* ignore */ }
+    const codeToPais: Record<string, string> = {
+      CO: 'Colombia', MX: 'M\u00e9xico', AR: 'Argentina', VE: 'Venezuela',
+      PE: 'Per\u00fa', CL: 'Chile', EC: 'Ecuador', CR: 'Costa Rica',
+      CU: 'Cuba', DO: 'Rep. Dominicana',
+    }
+    const tzMap: Record<string, string> = {
+      'America/Bogota': 'Colombia', 'America/Mexico_City': 'M\u00e9xico',
+      'America/Buenos_Aires': 'Argentina', 'America/Argentina/Buenos_Aires': 'Argentina',
+      'America/Caracas': 'Venezuela', 'America/Lima': 'Per\u00fa',
+      'America/Santiago': 'Chile', 'America/Guayaquil': 'Ecuador',
+      'America/Costa_Rica': 'Costa Rica', 'America/Havana': 'Cuba',
+      'America/Santo_Domingo': 'Rep. Dominicana',
+    }
+    async function detectar() {
+      try {
+        const res = await fetch('https://ipapi.co/country_code/')
+        if (res.ok) {
+          const pais = codeToPais[(await res.text()).trim()]
+          if (pais) { setForm(f => ({ ...f, pais })); return }
+        }
+      } catch { /* fall through */ }
+      try {
+        const tz = Intl.DateTimeFormat().resolvedOptions().timeZone
+        const pais = tzMap[tz]
+        if (pais) setForm(f => ({ ...f, pais }))
+      } catch { /* ignore */ }
+    }
+    detectar()
   }, [form.pais])
 
   const handleMagicLink = async (e: React.FormEvent) => {
