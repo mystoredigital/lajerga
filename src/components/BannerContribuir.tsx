@@ -5,32 +5,40 @@ import Link from 'next/link'
 import { PAISES } from '@/lib/supabase'
 
 const PAIS_POR_CODIGO: Record<string, string> = {
-  CO: 'Colombia',
-  MX: 'México',
-  AR: 'Argentina',
-  VE: 'Venezuela',
-  PE: 'Perú',
-  CL: 'Chile',
-  EC: 'Ecuador',
-  CR: 'Costa Rica',
-  CU: 'Cuba',
-  DO: 'Rep. Dominicana',
+  ES: 'España', MX: 'México', CO: 'Colombia', AR: 'Argentina',
+  VE: 'Venezuela', PE: 'Perú', CL: 'Chile', EC: 'Ecuador',
+  GT: 'Guatemala', HN: 'Honduras', SV: 'El Salvador', NI: 'Nicaragua',
+  CR: 'Costa Rica', PA: 'Panamá', CU: 'Cuba', DO: 'Rep. Dominicana',
+  PR: 'Puerto Rico', UY: 'Uruguay', PY: 'Paraguay', BO: 'Bolivia',
+  GQ: 'Guinea Ecuatorial',
 }
 
 const PAIS_POR_TIMEZONE: Record<string, string> = {
-  'America/Bogota': 'Colombia',
+  'Europe/Madrid': 'España',
+  'Atlantic/Canary': 'España',
   'America/Mexico_City': 'México',
   'America/Monterrey': 'México',
   'America/Cancun': 'México',
+  'America/Bogota': 'Colombia',
   'America/Buenos_Aires': 'Argentina',
   'America/Argentina/Buenos_Aires': 'Argentina',
   'America/Caracas': 'Venezuela',
   'America/Lima': 'Perú',
   'America/Santiago': 'Chile',
   'America/Guayaquil': 'Ecuador',
+  'America/Guatemala': 'Guatemala',
+  'America/Tegucigalpa': 'Honduras',
+  'America/El_Salvador': 'El Salvador',
+  'America/Managua': 'Nicaragua',
   'America/Costa_Rica': 'Costa Rica',
+  'America/Panama': 'Panamá',
   'America/Havana': 'Cuba',
   'America/Santo_Domingo': 'Rep. Dominicana',
+  'America/Puerto_Rico': 'Puerto Rico',
+  'America/Montevideo': 'Uruguay',
+  'America/Asuncion': 'Paraguay',
+  'America/La_Paz': 'Bolivia',
+  'Africa/Malabo': 'Guinea Ecuatorial',
 }
 
 export default function BannerContribuir() {
@@ -82,7 +90,7 @@ export default function BannerContribuir() {
             </h2>
             <p className="text-dark-300 mb-4 max-w-lg mx-auto">
               &iquest;Conoces jergas de {paisDetectado} que no est&eacute;n aqu&iacute;?
-              Ay&uacute;danos a hacer el diccionario m&aacute;s completo de Latinoam&eacute;rica.
+              Ay&uacute;danos a hacer el diccionario m&aacute;s completo del espa&ntilde;ol.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
               <Link

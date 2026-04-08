@@ -39,17 +39,27 @@ export default function AgregarPage() {
   useEffect(() => {
     if (form.pais) return
     const codeToPais: Record<string, string> = {
-      CO: 'Colombia', MX: 'M\u00e9xico', AR: 'Argentina', VE: 'Venezuela',
-      PE: 'Per\u00fa', CL: 'Chile', EC: 'Ecuador', CR: 'Costa Rica',
-      CU: 'Cuba', DO: 'Rep. Dominicana',
+      ES: 'España', MX: 'México', CO: 'Colombia', AR: 'Argentina',
+      VE: 'Venezuela', PE: 'Perú', CL: 'Chile', EC: 'Ecuador',
+      GT: 'Guatemala', HN: 'Honduras', SV: 'El Salvador', NI: 'Nicaragua',
+      CR: 'Costa Rica', PA: 'Panamá', CU: 'Cuba', DO: 'Rep. Dominicana',
+      PR: 'Puerto Rico', UY: 'Uruguay', PY: 'Paraguay', BO: 'Bolivia',
+      GQ: 'Guinea Ecuatorial',
     }
     const tzMap: Record<string, string> = {
-      'America/Bogota': 'Colombia', 'America/Mexico_City': 'M\u00e9xico',
+      'Europe/Madrid': 'España', 'Atlantic/Canary': 'España',
+      'America/Mexico_City': 'México', 'America/Monterrey': 'México',
+      'America/Cancun': 'México', 'America/Bogota': 'Colombia',
       'America/Buenos_Aires': 'Argentina', 'America/Argentina/Buenos_Aires': 'Argentina',
-      'America/Caracas': 'Venezuela', 'America/Lima': 'Per\u00fa',
+      'America/Caracas': 'Venezuela', 'America/Lima': 'Perú',
       'America/Santiago': 'Chile', 'America/Guayaquil': 'Ecuador',
-      'America/Costa_Rica': 'Costa Rica', 'America/Havana': 'Cuba',
-      'America/Santo_Domingo': 'Rep. Dominicana',
+      'America/Guatemala': 'Guatemala', 'America/Tegucigalpa': 'Honduras',
+      'America/El_Salvador': 'El Salvador', 'America/Managua': 'Nicaragua',
+      'America/Costa_Rica': 'Costa Rica', 'America/Panama': 'Panamá',
+      'America/Havana': 'Cuba', 'America/Santo_Domingo': 'Rep. Dominicana',
+      'America/Puerto_Rico': 'Puerto Rico', 'America/Montevideo': 'Uruguay',
+      'America/Asuncion': 'Paraguay', 'America/La_Paz': 'Bolivia',
+      'Africa/Malabo': 'Guinea Ecuatorial',
     }
     async function detectar() {
       try {
