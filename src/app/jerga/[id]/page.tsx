@@ -2,6 +2,7 @@ import { createServerClient } from '@/lib/supabase-server'
 import { getBandera, type Jerga } from '@/lib/supabase'
 import { notFound } from 'next/navigation'
 import BotonVoto from '@/components/BotonVoto'
+import AdSlot from '@/components/AdSlot'
 import Link from 'next/link'
 import type { Metadata } from 'next'
 
@@ -89,6 +90,10 @@ export default async function JergaPage({ params }: Props) {
             <BotonVoto jergaId={jerga.id} tipo="down" count={jerga.votos_negativos} />
           </div>
         </div>
+      </div>
+
+      <div className="mt-8">
+        <AdSlot size="rectangle" />
       </div>
     </div>
   )

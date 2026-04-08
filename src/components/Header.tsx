@@ -43,6 +43,15 @@ export default function Header() {
   return (
     <>
       <header className="sticky top-0 z-50 bg-dark-900/95 backdrop-blur-sm border-b border-dark-700">
+        {/* Banner publicitario */}
+        <div className="w-full bg-dark-800 border-b border-dark-700">
+          <div className="max-w-6xl mx-auto px-4 py-2">
+            <div className="h-[60px] bg-dark-700/50 rounded-lg flex items-center justify-center text-dark-500 text-xs border border-dark-600 border-dashed">
+              Espacio publicitario &mdash; <a href="mailto:ads@lajerga.app" className="text-primary-400 hover:underline ml-1">Anunciate aqu&iacute;</a>
+            </div>
+          </div>
+        </div>
+
         <div className="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
           <Link href="/" className="flex items-center gap-2">
             <span className="text-2xl font-bold bg-gradient-to-r from-primary-400 to-primary-600 bg-clip-text text-transparent">

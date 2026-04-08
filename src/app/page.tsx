@@ -3,6 +3,7 @@ import Buscador from '@/components/Buscador'
 import FiltroPaises from '@/components/FiltroPaises'
 import JergaCard from '@/components/JergaCard'
 import BannerContribuir from '@/components/BannerContribuir'
+import AdSlot from '@/components/AdSlot'
 import type { Jerga } from '@/lib/supabase'
 
 export default async function HomePage({
@@ -58,8 +59,15 @@ export default async function HomePage({
 
         {jergas && jergas.length > 0 ? (
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            {(jergas as Jerga[]).map((jerga) => (
-              <JergaCard key={jerga.id} jerga={jerga} />
+            {(jergas as Jerga[]).map((jerga, i) => (
+              <>
+                <JergaCard key={jerga.id} jerga={jerga} />
+                {i === 8 && (
+                  <div key="ad-mid" className="sm:col-span-2 lg:col-span-3">
+                    <AdSlot size="banner" />
+                  </div>
+                )}
+              </>
             ))}
           </div>
         ) : (
