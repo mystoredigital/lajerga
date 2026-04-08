@@ -12,6 +12,7 @@ COPY . .
 ENV NEXT_PUBLIC_SUPABASE_URL=https://supabase.mystoredigital.cloud
 ENV NEXT_PUBLIC_SUPABASE_ANON_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYW5vbiIsImlzcyI6InN1cGFiYXNlIiwiaWF0IjoxNzI5NzI4MDAwLCJleHAiOjE4ODc0OTQ0MDB9.DSRFl2a9ZlpjB0nT7D30u0Qq8aRtsAfifQmftzVAe5U
 ENV NEXT_PUBLIC_SITE_URL=https://lajerga.app
+ENV NEXT_PUBLIC_ADSENSE_ID=ca-pub-1321706024272690
 RUN npm run build
 
 FROM base AS runner
@@ -20,6 +21,7 @@ ENV NODE_ENV=production
 ENV NEXT_PUBLIC_SUPABASE_URL=https://supabase.mystoredigital.cloud
 ENV NEXT_PUBLIC_SUPABASE_ANON_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYW5vbiIsImlzcyI6InN1cGFiYXNlIiwiaWF0IjoxNzI5NzI4MDAwLCJleHAiOjE4ODc0OTQ0MDB9.DSRFl2a9ZlpjB0nT7D30u0Qq8aRtsAfifQmftzVAe5U
 ENV NEXT_PUBLIC_SITE_URL=https://lajerga.app
+ENV NEXT_PUBLIC_ADSENSE_ID=ca-pub-1321706024272690
 RUN addgroup --system --gid 1001 nodejs
 RUN adduser --system --uid 1001 nextjs
 COPY --from=builder /app/public ./public
