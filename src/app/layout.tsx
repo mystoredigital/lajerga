@@ -1,6 +1,5 @@
 import type { Metadata, Viewport } from "next"
 import { Inter } from "next/font/google"
-import Script from "next/script"
 import "./globals.css"
 import Header from "@/components/Header"
 import Footer from "@/components/Footer"
@@ -46,15 +45,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es">
+      <head>
+        <script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1321706024272690"
+          crossOrigin="anonymous"
+        />
+      </head>
       <body className={`${inter.className} antialiased min-h-screen flex flex-col`}>
-        {process.env.NEXT_PUBLIC_ADSENSE_ID && (
-          <Script
-            async
-            src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${process.env.NEXT_PUBLIC_ADSENSE_ID}`}
-            crossOrigin="anonymous"
-            strategy="afterInteractive"
-          />
-        )}
         <Header />
         <main className="flex-1">{children}</main>
         <Footer />
