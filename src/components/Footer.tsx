@@ -19,7 +19,14 @@ export default function Footer() {
           </div>
         </div>
         <div className="mt-6 pt-6 border-t border-dark-800 text-center text-xs text-dark-500">
-          &copy; {new Date().getFullYear()} LaJerga. Hecho con amor para Latinoam&eacute;rica.
+          <p>&copy; {new Date().getFullYear()} LaJerga.</p>
+          <p className="mt-1">
+            Hecho con amor por{' '}
+            <a href="https://mystoredigital.cloud" target="_blank" rel="noopener noreferrer" className="text-primary-400 hover:text-primary-300 transition-colors">
+              My Store Digital
+            </a>
+            {' '}para toda la comunidad hispanohablante.
+          </p>
         </div>
       </div>
     </footer>
