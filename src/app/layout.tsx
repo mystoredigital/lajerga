@@ -51,6 +51,11 @@ export default function RootLayout({
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1321706024272690"
           crossOrigin="anonymous"
         />
+        <script
+          defer
+          src="https://umami.mystoredigital.cloud/script.js"
+          data-website-id="b00b99d1-b006-418f-99a1-5e74ae19c3cd"
+        />
       </head>
       <body className={`${inter.className} antialiased min-h-screen flex flex-col`}>
         <Header />
