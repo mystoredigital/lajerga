@@ -1,0 +1,122 @@
+-- LaJerga: Datos iniciales (100 jergas)
+
+INSERT INTO public.jergas (jerga, significado, ejemplo, pais, categoria, votos_positivos, votos_negativos) VALUES
+-- Colombia (10)
+('Parce', 'Amigo, hermano, compañero cercano', 'Ey parce, vamos a rumbear esta noche', 'Colombia', 'coloquial', 45, 2),
+('Bacano', 'Genial, cool', 'Ese concierto estuvo muy bacano, hay que repetir', 'Colombia', 'coloquial', 52, 3),
+('Chimba', 'Algo muy bueno, excelente', 'Esa película es una chimba, tienes que verla', 'Colombia', 'coloquial', 38, 5),
+('Gonorrea', 'Expresión de sorpresa o admiración', '¡Gonorrea, qué golazo metió el man!', 'Colombia', 'vulgar', 29, 7),
+('Marica', 'Forma coloquial de llamar a un amigo', 'Ay marica, no me vas a creer lo que pasó ayer', 'Colombia', 'coloquial', 41, 4),
+('Parche', 'Grupo de amigos o lugar de reunión', 'El parche se reúne los viernes en la esquina del barrio', 'Colombia', 'coloquial', 33, 1),
+('Rumba', 'Fiesta', 'La rumba del sábado estuvo buenísima, bailamos hasta las cinco', 'Colombia', 'coloquial', 47, 2),
+('Tinto', 'Café negro', 'Regáleme un tinto bien caliente para arrancar la mañana', 'Colombia', 'coloquial', 55, 0),
+('Vaina', 'Cosa, situación', 'Pasame esa vaina que está encima de la mesa', 'Colombia', 'coloquial', 60, 1),
+('Berraco', 'Persona valiente, hábil', 'Ese man es un berraco, se ganó la beca con todo y trabajo', 'Colombia', 'coloquial', 44, 3),
+
+-- México (10)
+('Chido', 'Genial, cool', 'Está bien chido tu carro nuevo, felicidades', 'México', 'coloquial', 58, 2),
+('Neta', 'La verdad, en serio', 'Neta que no sabía que se habían casado esos dos', 'México', 'coloquial', 42, 1),
+('Güey', 'Amigo, tipo', 'No manches güey, eso no me lo esperaba para nada', 'México', 'coloquial', 67, 3),
+('Chamba', 'Trabajo', 'Ya encontré chamba en una empresa de tecnología', 'México', 'coloquial', 36, 2),
+('Fresa', 'Persona presumida, de clase alta', 'No seas fresa y vente a comer tacos en el puesto de la esquina', 'México', 'coloquial', 31, 4),
+('Naco', 'Persona sin clase, vulgar', 'No me lleves a ese lugar, se ve bien naco', 'México', 'coloquial', 22, 6),
+('Pedo', 'Problema, situación', '¿Cuál es tu pedo? Llevas toda la tarde con esa cara', 'México', 'vulgar', 39, 5),
+('Chafa', 'De mala calidad', 'Esa copia está bien chafa, se nota que es pirata', 'México', 'coloquial', 27, 3),
+('Morro', 'Joven, chico', 'Ese morro apenas tiene quince años y ya juega increíble', 'México', 'coloquial', 34, 1),
+('Órale', 'Expresión de sorpresa o aprobación', '¡Órale, qué bonita quedó la decoración de la fiesta!', 'México', 'expresión', 50, 2),
+
+-- Argentina (10)
+('Pibe', 'Chico, joven', 'Ese pibe juega al fútbol como un crack, tiene futuro', 'Argentina', 'coloquial', 48, 1),
+('Mina', 'Mujer, chica', 'Esa mina que vino a la fiesta es re copada', 'Argentina', 'coloquial', 35, 4),
+('Boludo', 'Tonto o forma de llamar a un amigo', 'Eh boludo, vení que te tengo que contar algo grosso', 'Argentina', 'coloquial', 72, 3),
+('Laburo', 'Trabajo', 'Estoy podrido del laburo, necesito unas vacaciones ya', 'Argentina', 'coloquial', 40, 2),
+('Bondi', 'Autobús', 'Perdí el bondi y tuve que caminar diez cuadras hasta casa', 'Argentina', 'coloquial', 29, 1),
+('Afanar', 'Robar', 'Me afanaron el celular en el subte la semana pasada', 'Argentina', 'coloquial', 25, 3),
+('Garpar', 'Pagar', 'Dale, yo garpo las cervezas y vos ponés la pizza', 'Argentina', 'coloquial', 19, 2),
+('Morfi', 'Comida', 'Vamos a buscar morfi que me muero de hambre', 'Argentina', 'coloquial', 32, 1),
+('Chamuyo', 'Hablar para seducir o engañar', 'Ese pibe tiene un chamuyo que las enamora a todas', 'Argentina', 'coloquial', 37, 5),
+('Piola', 'Tranquilo, cool', 'Quedate piola y no digas nada que ya se soluciona solo', 'Argentina', 'coloquial', 43, 2),
+
+-- Venezuela (10)
+('Pana', 'Amigo cercano', 'Mi pana siempre me acompaña cuando necesito algo', 'Venezuela', 'coloquial', 53, 1),
+('Chévere', 'Genial, excelente', 'La playa estuvo chévere, el agua estaba perfecta', 'Venezuela', 'coloquial', 61, 2),
+('Vaina', 'Cosa, situación', 'Esa vaina no sirve, hay que comprar una nueva', 'Venezuela', 'coloquial', 46, 1),
+('Ladilla', 'Fastidio, persona fastidiosa', 'No seas ladilla y deja de molestar con lo mismo', 'Venezuela', 'coloquial', 28, 4),
+('Burda', 'Mucho, bastante', 'La comida estaba burda de buena, repetí tres veces', 'Venezuela', 'coloquial', 34, 2),
+('Marico', 'Amigo coloquial', 'Marico, no vas a creer lo que me pasó en el trabajo hoy', 'Venezuela', 'coloquial', 40, 6),
+('Arrechera', 'Enojo, rabia intensa', 'Me dio una arrechera cuando vi que me cobraron de más', 'Venezuela', 'coloquial', 26, 3),
+('Chamo', 'Joven, chico', 'Ese chamo se la pasa estudiando todo el día sin parar', 'Venezuela', 'coloquial', 49, 1),
+('Jeva', 'Novia, chica', 'Mi jeva me preparó una sorpresa de cumpleaños increíble', 'Venezuela', 'coloquial', 31, 2),
+('Coño', 'Expresión de sorpresa', '¡Coño, mira la hora que es! Vamos a llegar tardísimo', 'Venezuela', 'expresión', 38, 5),
+
+-- Perú (10)
+('Bacán', 'Genial, excelente', 'La fiesta estuvo bacán, había buena música y ceviche', 'Perú', 'coloquial', 44, 2),
+('Causa', 'Amigo, compañero', 'Oye causa, préstame una luca que mañana te pago', 'Perú', 'coloquial', 51, 1),
+('Chamba', 'Trabajo', 'Conseguí una chamba bien pagada cerca de mi casa', 'Perú', 'coloquial', 37, 3),
+('Jato', 'Casa, hogar', 'Vamos a mi jato a ver el partido y tomamos unas chelas', 'Perú', 'coloquial', 24, 2),
+('Luca', 'Un sol, dinero', 'Préstame unas lucas para el almuerzo que se me olvidó la billetera', 'Perú', 'coloquial', 30, 1),
+('Pata', 'Amigo', 'Mi pata del colegio me invitó a su matrimonio en Cusco', 'Perú', 'coloquial', 42, 2),
+('Tono', 'Fiesta', 'Hay un tono en casa de Jorge el sábado, ¿te animas?', 'Perú', 'coloquial', 33, 1),
+('Yunta', 'Amigo cercano, inseparable', 'Él es mi yunta desde la primaria, lo conozco de toda la vida', 'Perú', 'coloquial', 28, 0),
+('Pituco', 'Persona adinerada, presumida', 'Ese restaurante es muy pituco, mejor vamos a la huarique de siempre', 'Perú', 'coloquial', 35, 4),
+('Huachafería', 'Cursilería, mal gusto', 'Esa decoración con brillos por todos lados es pura huachafería', 'Perú', 'coloquial', 18, 3),
+
+-- Chile (10)
+('Cachai', '¿Entiendes?', 'Hay que llegar temprano porque se llena altiro, ¿cachai?', 'Chile', 'coloquial', 56, 2),
+('Fome', 'Aburrido, sin gracia', 'La película estuvo súper fome, me dormí a la mitad', 'Chile', 'coloquial', 39, 1),
+('Pololo', 'Novio', 'Mi pololo me regaló flores y chocolates por nuestro aniversario', 'Chile', 'coloquial', 47, 3),
+('Weon', 'Amigo o tonto según contexto', 'Oye weon, anda a comprar pan antes de que cierre la panadería', 'Chile', 'coloquial', 65, 4),
+('Carrete', 'Fiesta', 'El carrete del viernes estuvo increíble, llegamos al otro día', 'Chile', 'coloquial', 43, 2),
+('Pega', 'Trabajo', 'Encontré una pega media tiempo que me deja estudiar tranquilo', 'Chile', 'coloquial', 32, 1),
+('Flaite', 'Persona vulgar, de barrio', 'No te metai a esa calle de noche, está lleno de flaites', 'Chile', 'coloquial', 23, 6),
+('Cuático', 'Impresionante, exagerado', 'Lo que pasó en el partido fue cuático, nadie lo podía creer', 'Chile', 'coloquial', 36, 2),
+('Bacán', 'Genial, excelente', 'La banda sonó bacán en el festival, se pasaron los locos', 'Chile', 'coloquial', 50, 1),
+('Caleta', 'Mucho, gran cantidad', 'Había caleta de gente en el concierto, no cabía ni un alfiler', 'Chile', 'coloquial', 41, 3),
+
+-- Ecuador (10)
+('Chiro', 'Sin dinero, pobre', 'Estoy chiro hasta fin de mes, no puedo salir a ningún lado', 'Ecuador', 'coloquial', 27, 2),
+('Ñaño', 'Hermano, amigo cercano', 'Mi ñaño me ayudó con la mudanza sin que le pidiera nada', 'Ecuador', 'coloquial', 45, 1),
+('Chuchaqui', 'Resaca', 'Tengo un chuchaqui terrible, no debí tomar tanto anoche', 'Ecuador', 'coloquial', 38, 3),
+('Caleta', 'Escondido, secreto', 'Guarda esto caleta que nadie se puede enterar todavía', 'Ecuador', 'coloquial', 22, 1),
+('Man', 'Tipo, persona', 'Ese man de allá es el que vende los boletos para el show', 'Ecuador', 'coloquial', 34, 2),
+('Simón', 'Sí, afirmativo', '¿Vienes a la fiesta? —Simón, ahí nos vemos a las nueve', 'Ecuador', 'expresión', 30, 0),
+('Nota', 'Genial, excelente', 'Tu nueva canción está nota, ponla otra vez que me encantó', 'Ecuador', 'coloquial', 26, 2),
+('Achachay', 'Expresión de frío', '¡Achachay, qué helado está el páramo! Pasame la chompa', 'Ecuador', 'expresión', 42, 1),
+('Chulla', 'Único, solo', 'Solo tengo un chulla zapato bueno, el otro se dañó ayer', 'Ecuador', 'coloquial', 19, 3),
+('Pelucón', 'Persona rica, adinerada', 'Ese barrio es de pelucones, las casas cuestan una fortuna', 'Ecuador', 'coloquial', 24, 4),
+
+-- Costa Rica (10)
+('Pura vida', 'Todo bien, saludo', '¿Cómo estás? —¡Pura vida, mae! Todo tranquilo por aquí', 'Costa Rica', 'expresión', 78, 0),
+('Mae', 'Amigo, tipo', 'Mae, ¿ya viste el partido? Estuvo buenísimo el segundo tiempo', 'Costa Rica', 'coloquial', 62, 2),
+('Tuanis', 'Genial, cool', 'Esa fiesta estuvo tuanis, la pasamos demasiado bien', 'Costa Rica', 'coloquial', 49, 1),
+('Brete', 'Trabajo', 'Salgo del brete a las cinco y paso por tu choza', 'Costa Rica', 'coloquial', 33, 2),
+('Chunche', 'Cosa, objeto', 'Pasame ese chunche que está en la gaveta de arriba', 'Costa Rica', 'coloquial', 28, 1),
+('Diay', 'Bueno, pues, interjección', 'Diay sí, no quedaba de otra más que aceptar la oferta', 'Costa Rica', 'expresión', 54, 3),
+('Güila', 'Niña, chica joven', 'Esa güila anda en el colegio todavía, es muy joven', 'Costa Rica', 'coloquial', 21, 4),
+('Teja', 'Cien colones', 'Préstame una teja para comprar un granizado en la pulpería', 'Costa Rica', 'coloquial', 16, 1),
+('Rajado', 'Muy rápido', 'Ese mae iba rajado por la autopista, casi le ponen un parte', 'Costa Rica', 'coloquial', 25, 2),
+('Birra', 'Cerveza', 'Vamos por unas birras después del brete para celebrar', 'Costa Rica', 'coloquial', 37, 1),
+
+-- Cuba (10)
+('Asere', 'Amigo, compañero', 'Asere, ¿qué bolá? Hace tiempo que no te veía por el barrio', 'Cuba', 'coloquial', 57, 2),
+('Yuma', 'Estados Unidos o extranjero', 'Mi primo se fue pa la Yuma el año pasado y no ha vuelto', 'Cuba', 'coloquial', 41, 3),
+('Guagua', 'Autobús', 'La guagua pasó llena y tuve que esperar la próxima media hora', 'Cuba', 'coloquial', 35, 1),
+('Paladar', 'Restaurante casero privado', 'Vamos al paladar de doña Rosa que hace el mejor arroz con pollo', 'Cuba', 'coloquial', 46, 0),
+('Resolver', 'Conseguir algo difícil, ingeniárselas', 'No te preocupes que yo resuelvo el asunto antes del viernes', 'Cuba', 'coloquial', 52, 2),
+('Jama', 'Comida', 'Vamos a buscar jama que llevo todo el día sin comer nada', 'Cuba', 'coloquial', 30, 1),
+('Pinchar', 'Trabajar', 'Mañana tengo que pinchar desde temprano en la construcción', 'Cuba', 'coloquial', 23, 2),
+('Socio', 'Amigo, compañero', 'Mi socio me consiguió unas entradas para el concierto de esta noche', 'Cuba', 'coloquial', 38, 1),
+('Fula', 'Dólar estadounidense', 'Necesito cambiar unas fulas para comprar en la tienda nueva', 'Cuba', 'coloquial', 20, 3),
+('Jinetear', 'Buscar dinero con turistas', 'Algunos chicos del malecón se dedican a jinetear para sobrevivir', 'Cuba', 'coloquial', 15, 5),
+
+-- Rep. Dominicana (10)
+('Tiguere', 'Tipo astuto, vivo', 'Ese tiguere siempre se las ingenia para salir adelante', 'Rep. Dominicana', 'coloquial', 43, 3),
+('Vaina', 'Cosa, situación', 'Dime la vaina de una vez y deja el rodeo que me desespero', 'Rep. Dominicana', 'coloquial', 55, 1),
+('Chin', 'Un poco, poquito', 'Échale un chin de limón al aguacate para que quede mejor', 'Rep. Dominicana', 'coloquial', 36, 0),
+('Guagua', 'Autobús', 'Cojo la guagua en la parada de la avenida todos los días', 'Rep. Dominicana', 'coloquial', 32, 2),
+('Jevo', 'Novio, novia', 'Mi jeva me invitó a conocer a su familia el domingo', 'Rep. Dominicana', 'coloquial', 29, 3),
+('Pariguayo', 'Tonto, lento, bobo', 'No seas pariguayo y atrévete a hablarle de una vez', 'Rep. Dominicana', 'coloquial', 24, 5),
+('Coro', 'Grupo, situación divertida', 'Anoche se formó un coro en la esquina que no parábamos de reír', 'Rep. Dominicana', 'coloquial', 31, 2),
+('Tripear', 'Pasarla bien, divertirse', 'Vamos a tripear un rato al malecón que la noche está buena', 'Rep. Dominicana', 'coloquial', 27, 1),
+('Mangú', 'Plato típico dominicano', 'Desayuné un mangú con los tres golpes que me dejó lleno hasta la tarde', 'Rep. Dominicana', 'coloquial', 63, 0),
+('Yipeta', 'Camioneta SUV', 'Se compró una yipeta nueva que parece un tanque de guerra', 'Rep. Dominicana', 'coloquial', 21, 4);
