@@ -2,6 +2,7 @@ import { createServerClient } from '@/lib/supabase-server'
 import Buscador from '@/components/Buscador'
 import FiltroPaises from '@/components/FiltroPaises'
 import JergaCard from '@/components/JergaCard'
+import BannerContribuir from '@/components/BannerContribuir'
 import type { Jerga } from '@/lib/supabase'
 
 export default async function HomePage({
@@ -43,6 +44,9 @@ export default async function HomePage({
           </div>
         </div>
       </section>
+
+      {/* Banner contribuir */}
+      {!searchParams.q && <BannerContribuir />}
 
       {/* Jergas populares */}
       <section className="max-w-6xl mx-auto px-4 py-12">
